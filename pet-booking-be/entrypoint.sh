@@ -7,9 +7,17 @@ if [ ! -d "vendor" ] && [ -f "composer.json" ]; then #&& [ "$APP_ENV" == "produc
     composer dump-autoload
 fi
 
+# Generate application key
 php artisan key:generate
+
+# Migrate database
 php artisan migrate
-php artisan seed
+
+# Insert seeders data to database
+php artisan db:seed
+
+# Generate swagger documentation
+php artisan l5-swagger:generate
 
 # Run apache foreground
 apachectl -D FOREGROUND
