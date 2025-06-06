@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install composer dependencies && setup app
-if [ ! -d "vendor" ] && [ -f "composer.json" ]; then #&& [ "$APP_ENV" == "production" ]; then
+if [ ! -d "vendor" ]; then
     composer config --global process-timeout 6000
     composer install
     composer dump-autoload

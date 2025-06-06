@@ -13,15 +13,3 @@ up-dev: fix-permissions
 # Stop and remove the development environment containers
 down-dev:
 	docker-compose -f compose.dev.yml down
-
-# Start the production environment
-# - Ensures file permissions are correct
-# - Checks required environment variables
-# - Builds and runs the production containers in detached mode
-up-prod: fix-permissions
-	./check_env.sh
-	docker-compose -f compose.prod.yml up -d --build
-
-# Stop and remove the production environment containers
-down-prod:
-	docker-compose -f compose.prod.yml down
