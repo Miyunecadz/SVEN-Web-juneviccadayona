@@ -5,8 +5,6 @@ if [ ! -d "vendor" ] && [ -f "composer.json" ]; then #&& [ "$APP_ENV" == "produc
     composer config --global process-timeout 6000
     composer install
     composer dump-autoload
-
-
 fi
 
 php artisan key:generate
