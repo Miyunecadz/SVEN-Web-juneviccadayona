@@ -24,7 +24,6 @@ services:
       - "8000:80"
     environment:
       - APP_ENV=production
-      - APP_KEY=base64:RxUHma7ggg3KVBAy+eF1OhAgs41VO4GXF3kJV+Y+8jQ=
       - APP_DEBUG=true
       - DB_HOST=db
       - DB_PORT=3306
