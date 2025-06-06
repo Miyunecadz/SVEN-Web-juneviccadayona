@@ -44,10 +44,24 @@ Before you begin, ensure you have the following installed on your machine:
 
    This command will handle all necessary setup steps for you, such as installing dependencies, starting services, or spinning up containers.
 
-3. **Access the Application**
+## Accessing the Application
 
-   - Once the setup is complete, follow any additional instructions printed in the console to access your local development server (e.g., http://localhost:3000).
-   - If an `.env` file or other configuration is needed, see the notes below.
+- **Frontend:**  
+  Visit [http://localhost:3000](http://localhost:3000)  
+
+- **Backend API:**  
+  Visit [http://localhost:8000](http://localhost:8000)  
+
+- **API Documentation (Swagger):**  
+  Visit [http://localhost:8000/api/documentation](http://localhost:8000/api/documentation)
+
+- **Database (MySQL):**  
+  - Default connection string:  
+    ```
+    mysql://root:secret@localhost:3306/database_name
+    ```
+  - You can connect using a database client like [MySQL Workbench](https://www.mysql.com/products/workbench/), [DBeaver](https://dbeaver.io/), or similar.
+
 
 ## Notes
 
